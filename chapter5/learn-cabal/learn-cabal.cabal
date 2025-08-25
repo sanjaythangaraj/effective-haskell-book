@@ -1,0 +1,43 @@
+cabal-version:      3.4
+name:               learn-cabal
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             sanjaythangaraj
+maintainer:         sanjaythangaraj@outlook.in
+-- copyright:
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+library
+    exposed-modules:  MyLib
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base ^>=4.20.0.0
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable learn-cabal
+    main-is:          Main.hs
+    -- other-modules:
+    -- other-extensions:
+    build-depends:
+        base ^>=4.20.0.0,
+        learn-cabal
+
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+test-suite learn-cabal-test
+    default-language: Haskell2010
+    -- other-modules:
+    -- other-extensions:
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.20.0.0,
+        learn-cabal
